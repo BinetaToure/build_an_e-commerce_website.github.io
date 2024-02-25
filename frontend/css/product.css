@@ -1,0 +1,114 @@
+/*********/
+/*PRODUCT*/
+/*********/
+
+/*ITEM*/
+.item {
+	display: flex; 
+    padding: 2rem;
+    gap: 2rem;
+}
+.item__img {
+    width: 100%;
+    min-width: 300px;
+    max-width: 500px;
+}
+.item__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+	border-radius: 10px;
+}
+.item__content {
+	width: 100%;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    gap: 2rem;
+}
+.item__content h1 {
+	text-align: left;
+}
+.item__content__titlePrice,
+.item__content__description,
+.item__content__settings {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-bottom: 1rem;
+	border-bottom: 1px solid white;
+}
+.item__content__settings{
+    position: relative;
+}
+.item__content__description {
+	display: flex;
+	flex-direction: column;
+}
+.item__content__description__title {
+	font-weight: 600;
+	font-size: 24px;
+}
+/*CLASS JS*/
+.showError{
+    position: absolute;
+	font-weight: 600;
+	font-size: 1rem;
+    bottom: -1.5rem;
+	color: crimson;
+}
+
+/**************/
+.item__content__settings__color select,
+.item__content__settings__quantity input {
+	color: var(--footer-secondary-color);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	border-radius: 10px;
+	border: 1px solid #767676;
+	text-align: center;
+	text-align-last: center;
+}
+.item__content__settings__color select:focus,
+.item__content__settings__quantity input:focus {
+	outline: none;
+}
+.item__content__addButton {
+	display: flex;
+	justify-content: center;
+}
+.item__content__addButton button {
+	font-size: 22px;
+	border-radius: 10px;
+	border: 0;
+	background-color: var(--secondary-color);
+	color: white;
+	padding: 18px 28px;
+	cursor: pointer;
+}
+.item__content__addButton button:hover {
+	box-shadow: inset 1px 2px 2px #000000, inset -1px -2px 2px #aba7a7;
+}
+
+/***************/
+/*MEDIA QUERIES*/
+/***************/
+@media (max-width: 1400px) {
+	.item {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+	.item {
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .item__content{
+        gap: 1rem;
+    }
+}

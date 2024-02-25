@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Nom du produit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Plateforme incroyable de e-commerce">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/client/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/client/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/client/images/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="/client/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link href="../css/styles.css" rel="stylesheet"/>
+    <link href="../css/product.css" rel="stylesheet"/>
+  </head>
+  <body>
+        <!-- Header -->
+        <header>
+            <div class="menu">
+                <a href="../html/index.html">
+                    <img class="logo" src="../images/logo.png" alt="Logo de l'entreprise">
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="../html/index.html">Accueil</a></li>
+                        <li><a href="../html/cart.html">Panier</a></li>
+                    </ul>
+            </nav>
+            </div>
+            <img class="banner" src="../images/banniere.jpg" alt="Bannière">
+        </header>
+        <!-- Main -->
+        <main>
+            <article class="item">
+                <div class="item__img"></div>
+                <div class="item__content">
+                    <div class="item__content__titlePrice">
+                        <h1 id="title"></h1>
+                        <p>Prix : <span id="price"></span>€</p>
+                    </div>
+                    <div class="item__content__description">
+                        <p class="item__content__description__title">Description :</p>
+                        <p id="description"></p>
+                    </div>
+                    <div class="item__content__settings">
+                        <div class="item__content__settings__color">
+                            <label for="color-select">Choisir une couleur :</label>
+                            <select name="color-select" id="colors"></select>
+                        </div>
+
+                        <div class="item__content__settings__quantity">
+                            <label for="itemQuantity">Nombre d'article(s) (1-100) :</label>
+                            <input type="number" name="itemQuantity" min="1" max="100" value="0" id="quantity">
+                        </div>
+                    </div>
+
+                    <div class="item__content__addButton">
+                        <button id="addToCart">Ajouter au panier</button>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <p>© Copyright 2022 | Openclassrooms</p>
+        </footer>
+    <script  type="module" src="../scripts/product.js"></script>
+  </body>
+</html>
